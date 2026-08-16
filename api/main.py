@@ -5,6 +5,7 @@ from api.routers import auth, characters, inventory, rules, spells
 app = FastAPI()
 
 app.include_router(auth.router)
+app.include_router(rules.router)
 
 @app.on_event("startup")
 def on_startup():
